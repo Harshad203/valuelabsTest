@@ -1,0 +1,52 @@
+
+<div>
+
+<!--
+  <h1> poc </h1>
+<hr/>
+<Br/>
+<Br/>  <input  type="text" [(ngModel)]='x' />
+<span>  {{  msg }}</span>
+<Br/> <button (click)='eventhandlingfunction()'>some basic event</button>
+ <button (click)='contactserver()'>after spring boot running</button>
+  -->
+
+  <label>Product   ID 
+  <input text-align = "right" type="text" [(ngModel)]='stock.product_id' />
+</label>
+  <span>  {{    msg    }}</span>
+  <br/>
+  <label>ProductPrice 
+  <input text-align = "right" type="text" [(ngModel)]='stock.price' />
+</label>
+  <br/>
+  <label>Product Qty
+  <input text-align = "right" type="text" [(ngModel)]='stock.qty' />
+</label>
+  
+  <br/>
+  <br/>
+  <br/>
+  
+  <button (click)='getByProductID()'>Get Product Info</button>
+  <button (click)='updateStock()'>Update Product Info</button>
+
+<hr/>
+
+<p *ngFor="let sitem of stockItems">
+  {{sitem.product_id}} --{{sitem.price}} --{{sitem.qty}}
+</p>
+
+
+
+<hr/>
+
+
+
+
+
+</div>
+
+
+
+
