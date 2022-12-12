@@ -20,13 +20,13 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
-	@GetMapping("/getProductInfo/{productId}")
+	@GetMapping("/stock-by-product-id/{productId}")
 	public Optional<Product> getProductInfo(@PathVariable Integer productId) {		
 	    return productService.getProductDetailsofProductId(productId);
 	}
 	
 	
-	@PutMapping("/updateProductInfo")
+	@PutMapping("/update-product")
 	public Product updateProductInfo(@RequestBody Product product) {		
 	    return productService.updateProductInfo(product);
 	}
